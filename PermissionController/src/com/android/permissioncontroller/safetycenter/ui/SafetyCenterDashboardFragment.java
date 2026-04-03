@@ -165,12 +165,6 @@ public final class SafetyCenterDashboardFragment extends SafetyCenterFragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-        getSafetyCenterViewModel().pageOpen();
-    }
-
-    @Override
     public void configureInteractionLogger() {
         InteractionLogger logger = getSafetyCenterViewModel().getInteractionLogger();
         logger.setSessionId(getSafetyCenterSessionId());

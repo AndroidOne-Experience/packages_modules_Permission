@@ -81,11 +81,6 @@ class PrivacySubpageFragment : SafetyCenterFragment() {
         logger.groupId = PRIVACY_SOURCES_GROUP_ID
     }
 
-    override fun onResume() {
-        super.onResume()
-        safetyCenterViewModel.pageOpen(PRIVACY_SOURCES_GROUP_ID)
-    }
-
     override fun renderSafetyCenterData(uiData: SafetyCenterUiData?) {
         Log.v(TAG, "renderSafetyCenterEntryGroup called with $uiData")
         val entryGroup = uiData?.getMatchingGroup(PRIVACY_SOURCES_GROUP_ID)

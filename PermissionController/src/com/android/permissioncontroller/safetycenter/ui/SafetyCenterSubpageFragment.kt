@@ -85,11 +85,6 @@ class SafetyCenterSubpageFragment : SafetyCenterFragment() {
         logger.groupId = sourceGroupId
     }
 
-    override fun onResume() {
-        super.onResume()
-        safetyCenterViewModel.pageOpen(sourceGroupId)
-    }
-
     override fun renderSafetyCenterData(uiData: SafetyCenterUiData?) {
         Log.v(TAG, "renderSafetyCenterEntryGroup called with $uiData")
         val entryGroup = uiData?.getMatchingGroup(sourceGroupId)
